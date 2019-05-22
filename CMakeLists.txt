@@ -6,13 +6,13 @@ set(CMAKE_TOOLCHAIN_FILE "arm.cmake")
 project(nucleo_template C ASM)
 
 add_executable(nucleo_template 
-	platform/startup_stm32f103xb.s
+    platform/startup_stm32f103xb.s
     platform/system_stm32f1xx.c
-	main/main.c)
+    main/main.c)
 
 target_include_directories(nucleo_template PUBLIC
-	main
-	platform)
+    main
+    platform)
 
 target_link_libraries(nucleo_template c m)
 
