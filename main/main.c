@@ -15,7 +15,7 @@ int main(void) {
 
     GPIOA->BSRR = (GPIO_BSRR_BS5);
 
-	while(1) {}
+    while(1) {}
 }
 
 void clock_config() {
