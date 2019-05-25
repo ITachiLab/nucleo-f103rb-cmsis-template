@@ -34,7 +34,7 @@ A toolchain configuration. You have to adapt this to your system and ARM compile
 
 ## Building
 
-As you can see I use CMake to generate all necessary build files. If you don't have it installed, never were a better time to do so. You also need to install the ARM GCC toolchain. For Windows I use version **6 2017 Q2 Update**, because newer versions produced compilation errors.
+As you can see I use CMake to generate all necessary build files. If you don't have it installed, never were a better time to do so. You also need to install the [ARM GCC toolchain](https://developer.arm.com/tools-and-software/open-source-software/developer-tools/gnu-toolchain/gnu-rm/downloads). I use version **6 2017 Q2 Update**, because newer versions produced weird compilation errors, and that's an issue experienced by a lot of programmers.
 
 ### Windows
 
@@ -62,4 +62,12 @@ This will program your board through ST-Link. You can also use ST-Link utility t
 
 ### Linux
 
-#### Coming soonn
+The process of creating a building environment for Linux is similar to Window (thanks to CMake). You also need CMake (which can be obtained by `apt-get`) and of course ARM toolchain. If you can't invoke `make` command that means you also need to install `build-essential` package.
+
+Before building anything, edit `arm.cmake` file and  make sure that toolchain path matches the location of toolchain directory on your machine. If yes, create a `build` directory inside of this project, and from the inside of it execute the following command:
+
+`cmake -G "Unix Makefiles" ..`
+
+Sometimes it might happen that the first invocation of the above command will produced an error saying that GCC couldn't compile a simple test code. If you get something like that, try again and it should work. I don't know why, but the first execution fails, and consecutive works properly.
+
+If CMake generated all necessary files, simply run `make all` and it should compile final binary. If you have OpenOCD in PATH, you can also use `make program` command to program your device.
