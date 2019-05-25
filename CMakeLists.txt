@@ -14,8 +14,6 @@ target_include_directories(nucleo_template PUBLIC
     main
     platform)
 
-target_link_libraries(nucleo_template c m)
-
 add_custom_target(program "openocd" "-f board/st_nucleo_f103rb.cfg -c \"program nucleo_template reset exit\"")
 
 add_definitions(-DSTM32F103xB)
