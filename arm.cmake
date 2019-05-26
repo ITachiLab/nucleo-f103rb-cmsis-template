@@ -25,4 +25,4 @@ set(CMAKE_LINKER "${tools}/bin/${prefix}-ld${suffix}")
 
 set(CMAKE_C_FLAGS "${mcu} ${compiler_flags}")
 set(CMAKE_ASM_FLAGS "${mcu} ${compiler_flags}")
-set(CMAKE_EXE_LINKER_FLAGS "${CMAKE_EXE_LINKER_FLAGS} ${linker_flags}") 
+set(CMAKE_EXE_LINKER_FLAGS "${linker_flags}") 
