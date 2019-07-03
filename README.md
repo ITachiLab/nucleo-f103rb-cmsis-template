@@ -48,7 +48,7 @@ When everything is installed, create a `build` directory in root of this project
 
 If everything is properly configured, you shouldn't see any errors. If they are, then... Well... Annihilate them! Now when CMake did its job, it's time to build the binary:
 
-`C:\Users\Foo\nucleo-f103rb-cmsis-template\build> mingw32-make make all`
+`C:\Users\Foo\nucleo-f103rb-cmsis-template\build> mingw32-make all`
 
 > I have `mingw32-make.exe` in PATH so I can execute it from everywhere.
 
@@ -56,7 +56,7 @@ When everything went right, you should see your binary built in `build` director
 
 If you have OpenOCD installed and available in PATH, you can also run:
 
-`C:\Users\Foo\nucleo-f103rb-cmsis-template\build> mingw32-make make program`
+`C:\Users\Foo\nucleo-f103rb-cmsis-template\build> mingw32-make program`
 
 This will program your board through ST-Link. You can also use ST-Link utility to manually program the device.
 
