@@ -1,0 +1,7 @@
+[submodule "platform/cmsis-device-f1"]
+	path = platform/cmsis-device-f1
+	url = https://github.com/STMicroelectronics/cmsis-device-f1
+[submodule "platform/cmsis-core"]
+	path = platform/cmsis-core
+	url = https://github.com/STMicroelectronics/cmsis-core
+	branch = cm3
